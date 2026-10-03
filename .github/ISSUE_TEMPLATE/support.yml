@@ -1,0 +1,38 @@
+name: 장부온 지원 문의
+description: 장부온 사용 중 발생한 문제를 알려주세요.
+title: "[지원] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        장부 금액, 거래처, 계좌정보, 백업 비밀번호, 개인식별정보는 절대 올리지 마세요.
+  - type: input
+    id: version
+    attributes:
+      label: 앱 버전
+      placeholder: 예) 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 문제 영역
+      options:
+        - 파일 가져오기
+        - 기록/달력
+        - 백업/복원
+        - 광고/광고 제거 구매
+        - 기타
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 방법
+      description: 민감한 장부 내용은 제외하고 어떤 순서로 문제가 발생했는지 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 동작

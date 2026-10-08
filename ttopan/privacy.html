@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title id="pageTitle">또판 개인정보처리방침</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;max-width:760px;margin:0 auto;padding:40px 20px;line-height:1.7;color:#171717}
+    h1{font-size:30px} h2{margin-top:32px;font-size:20px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:16px}.lang{display:flex;gap:6px}
+    .lang button{border:1px solid #d1d5db;background:#fff;border-radius:999px;padding:6px 10px;font-weight:700}
+    .lang button[aria-pressed="true"]{background:#111827;color:#fff}
+    .notice{padding:14px 16px;background:#f3f4f6;border-radius:12px}
+  </style>
+</head>
+<body>
+<div class="top"><strong>AXENFOLD</strong><div class="lang" role="group" aria-label="Language"><button data-lang="ko">KO</button><button data-lang="en">EN</button></div></div>
+<main id="content"></main><noscript><h1>또판 개인정보처리방침 / TTOPAN Privacy Policy</h1><p>게임 저장값은 기기에 저장되며 Apple Game Center 로그인 시 플레이어 식별 정보와 점수가 Apple에 전송될 수 있습니다. AXENFOLD 서버에는 게임 정보를 저장하지 않습니다. 문의: axenfold.support@gmail.com</p><p>Game records remain on your device. With Apple Game Center sign-in, player identity and scores may be sent to Apple. AXENFOLD does not store gameplay data on a developer server. Contact: axenfold.support@gmail.com</p></noscript>
+<footer style="max-width:760px;margin:0 auto;padding:0 20px 44px"><a href="./" style="color:#91516a">고객지원 / Support</a></footer>
+<script>
+(() => {
+  const KEY='ttopan.language';
+  const params=new URLSearchParams(location.search);
+  let lang=params.get('lang');
+  if(lang!=='ko'&&lang!=='en'){try{const saved=localStorage.getItem(KEY);if(saved==='ko'||saved==='en')lang=saved}catch{}}
+  if(lang!=='ko'&&lang!=='en')lang=(navigator.language||'').toLowerCase().split(/[-_]/)[0]==='ko'?'ko':'en';
+  const copy={
+    ko:{
+      title:'또판 개인정보처리방침',effective:'시행일: 2026-10-08',
+      sections:[
+        ['1. 수집하는 개인정보','또판(TTOPAN)은 AXENFOLD 자체 회원가입이나 계정 로그인을 제공하지 않습니다. iOS에서는 선택적으로 Apple Game Center 로그인을 사용할 수 있으며, 로그인 상태 확인과 순위표 기능을 위해 Apple이 제공하는 플레이어 표시 이름과 플레이어 식별자를 앱 실행 중 처리할 수 있습니다. 이 정보는 AXENFOLD 개발자 서버에 저장하지 않습니다.'],
+        ['2. 기기 내 저장 정보','게임 기록과 진행 정보는 기기 내부 저장소에 저장될 수 있습니다. 여기에는 10초 맞히기·연타왕·공 튕기기·한붓그리기·한칸질주·번쩍기억의 기록과 진행, 보유 코인, 미니룸 가구·배치·캐릭터 꾸미기, BGM·음량 설정, 언어·소리·진동·튜토리얼 확인 같은 앱 설정이 포함될 수 있습니다. 이름, 이메일, 전화번호, 위치정보 등 사용자를 식별하기 위한 정보는 이러한 로컬 게임 기록에 포함하지 않습니다.'],
+        ['3. 광고·분석·결제','현재 출시 코드에는 광고 SDK, 사용자 추적·분석 SDK, 인앱결제 또는 구독 기능이 활성화되어 있지 않습니다.'],
+        ['4. 외부 전송 및 제3자 제공','현재 검증된 앱 코드에는 AXENFOLD 개발자 서버/API로 게임 이용정보를 전송하는 경로가 없습니다. 다만 사용자가 Apple Game Center에 로그인한 경우 플레이어 식별 정보와 해당 플레이에서 획득한 순위표 점수를 Apple Game Center로 전송할 수 있습니다. Game Center의 데이터 처리는 Apple의 서비스 및 개인정보 보호 정책을 따릅니다.'],
+        ['5. 시스템 백업','Android는 allowBackup=false이며 cloud backup 및 device transfer용 data extraction rules에서도 앱 데이터 백업을 제외합니다. iOS에서는 앱의 WebKit 로컬 저장소에 기록이 보관되며, 앱 자체 iCloud 동기화나 개발자 서버 백업은 제공하지 않습니다. 운영체제 자체의 백업·복원 동작은 Apple의 시스템 설정과 정책에 따를 수 있습니다.'],
+        ['6. 삭제','앱 삭제 또는 운영체제의 앱 데이터 삭제 기능을 사용하면 기기 내부의 로컬 기록도 일반적으로 함께 삭제됩니다. 운영체제 백업에서 복원한 경우 기록이 다시 나타날 수 있습니다.'],
+        ['7. 방침 변경','향후 광고, 분석, 결제, AXENFOLD 계정 로그인, 클라우드 동기화 또는 추가 네트워크 기능을 도입하는 경우 해당 기능 출시 전에 본 방침과 App Store 앱 개인정보 및 Google Play Data Safety 신고를 다시 검토합니다.'],
+        ['8. 운영자 및 문의','서비스 운영 브랜드: AXENFOLD. 개인정보 및 서비스 관련 문의: axenfold.support@gmail.com']
+      ]
+    },
+    en:{
+      title:'TTOPAN Privacy Policy',effective:'Effective: October 8, 2026',
+      sections:[
+        ['1. Personal Data Collection','TTOPAN does not provide an AXENFOLD account system or developer-operated sign-in. On iOS, users may optionally sign in with Apple Game Center. For authentication and leaderboard features, the app may process the player display name and player identifier supplied by Apple while the app is running. AXENFOLD does not store this information on a developer server.'],
+        ['2. Data Stored on Your Device','Game records and progress may be stored locally on your device. This can include records and progress for 10-Second Challenge, Tap King, Bounce, One-Stroke, Lane Hop and Flash Grid, earned coins, miniroom furniture and layouts, character customization, BGM and volume preferences, and preferences such as language, sound, haptics and tutorial status. Identifying information such as your name, email address, phone number or location is not included in these local game records.'],
+        ['3. Advertising, Analytics, and Payments','The current release code does not have an active advertising SDK, user-tracking or analytics SDK, in-app purchase, or subscription feature.'],
+        ['4. External Transmission and Third Parties','The currently verified app code has no path that sends gameplay data to an AXENFOLD developer server or API. If the user signs in to Apple Game Center, the app may send the player identifier and leaderboard scores earned in gameplay to Apple Game Center. Game Center data is handled under Apple’s service and privacy policies.'],
+        ['5. System Backup','Android uses allowBackup=false and data extraction rules that exclude app data from cloud backup and device transfer. On iOS, records are stored in the app’s WebKit local storage. The app does not provide its own iCloud sync or developer-server backup. Apple operating-system backup and restore behavior may still follow Apple’s system settings and policies.'],
+        ['6. Deletion','Uninstalling the app or using the operating system’s app-data deletion controls will generally remove locally stored records. Records may reappear if restored from an operating-system backup.'],
+        ['7. Changes to This Policy','If advertising, analytics, payments, an AXENFOLD account sign-in, cloud sync, or additional network features are added later, this policy, App Store privacy disclosures, and Google Play Data Safety information will be reviewed before those features are released.'],
+        ['8. Operator and Contact','Service brand: AXENFOLD. Privacy and service inquiries: axenfold.support@gmail.com']
+      ]
+    }
+  };
+  function render(next){
+    lang=next; document.documentElement.lang=lang;
+    try{localStorage.setItem(KEY,lang)}catch{}
+    const c=copy[lang]; document.title=c.title;
+    document.querySelector('#content').innerHTML='<h1>'+c.title+'</h1><p class="notice">'+c.effective+'</p>'+c.sections.map(([h,b])=>'<section><h2>'+h+'</h2><p>'+b+'</p></section>').join('');
+    document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+  }
+  document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>render(b.dataset.lang));
+  render(lang);
+})();
+</script>
+</body>
+</html>

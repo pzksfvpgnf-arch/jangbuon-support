@@ -1,67 +1,106 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title id="pageTitle">또판 개인정보처리방침</title>
-  <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;max-width:760px;margin:0 auto;padding:40px 20px;line-height:1.7;color:#171717}
-    h1{font-size:30px} h2{margin-top:32px;font-size:20px}
-    .top{display:flex;justify-content:space-between;align-items:center;gap:16px}.lang{display:flex;gap:6px}
-    .lang button{border:1px solid #d1d5db;background:#fff;border-radius:999px;padding:6px 10px;font-weight:700}
-    .lang button[aria-pressed="true"]{background:#111827;color:#fff}
-    .notice{padding:14px 16px;background:#f3f4f6;border-radius:12px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="TTOPAN privacy policy and privacy notices for each app version.">
+<title>또판 · TTOPAN 개인정보처리방침</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#fffbf6;color:#46392f;font:15px/1.82 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif}
+main{max-width:850px;padding:38px 22px 55px;margin:0 auto}
+nav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:flex-end}
+button{font:inherit;border:1px solid #dac8b7;border-radius:30px;padding:7px 14px;background:#fffefd;color:#715546;cursor:pointer}
+button[aria-pressed=true]{background:#9d7078;color:white;border-color:#9d7078}
+header{display:flex;gap:12px;justify-content:space-between;align-items:center}
+h1{font-size:clamp(25px,6vw,36px);line-height:1.25;margin:32px 0 15px}
+h2{font-size:19px;margin:33px 0 8px}
+p{margin:7px 0;color:#68574e} .note{padding:15px 18px;background:#f4ece5;border-radius:12px;color:#745d50}
+small{color:#847164}a{color:#885d66}footer{margin-top:32px;border-top:1px solid #e5d8ca;padding-top:20px;font-size:13px}
+@media(max-width:500px){header{display:block}nav{justify-content:flex-start;margin-top:14px}}
+</style>
 </head>
-<body>
-<div class="top"><strong>AXENFOLD</strong><div class="lang" role="group" aria-label="Language"><button data-lang="ko">KO</button><button data-lang="en">EN</button></div></div>
-<main id="content"></main><noscript><h1>또판 개인정보처리방침 / TTOPAN Privacy Policy</h1><p>게임 저장값은 기기에 저장되며 Apple Game Center 로그인 시 플레이어 식별 정보와 점수가 Apple에 전송될 수 있습니다. AXENFOLD 서버에는 게임 정보를 저장하지 않습니다. 문의: axenfold.support@gmail.com</p><p>Game records remain on your device. With Apple Game Center sign-in, player identity and scores may be sent to Apple. AXENFOLD does not store gameplay data on a developer server. Contact: axenfold.support@gmail.com</p></noscript>
-<footer style="max-width:760px;margin:0 auto;padding:0 20px 44px"><a href="./" style="color:#91516a">고객지원 / Support</a></footer>
+<body><main>
+<header><strong>TTOPAN · AXENFOLD</strong><nav aria-label="Language"><button type="button" data-lang="ko">한국어</button><button type="button" data-lang="en">English</button><button type="button" data-lang="ja">日本語</button><button type="button" data-lang="zh">简体中文</button></nav></header>
+<h1 id="heading"></h1><p id="effective" class="note"></p><div id="sections"></div>
+<footer><p id="contact"></p><a href="https://pzksfvpgnf-arch.github.io/jangbuon-support/ttopan/">TTOPAN Support · 고객지원</a></footer>
+</main>
 <script>
-(() => {
-  const KEY='ttopan.language';
-  const params=new URLSearchParams(location.search);
-  let lang=params.get('lang');
-  if(lang!=='ko'&&lang!=='en'){try{const saved=localStorage.getItem(KEY);if(saved==='ko'||saved==='en')lang=saved}catch{}}
-  if(lang!=='ko'&&lang!=='en')lang=(navigator.language||'').toLowerCase().split(/[-_]/)[0]==='ko'?'ko':'en';
-  const copy={
-    ko:{
-      title:'또판 개인정보처리방침',effective:'시행일: 2026-10-08',
-      sections:[
-        ['1. 수집하는 개인정보','또판(TTOPAN)은 AXENFOLD 자체 회원가입이나 계정 로그인을 제공하지 않습니다. iOS에서는 선택적으로 Apple Game Center 로그인을 사용할 수 있으며, 로그인 상태 확인과 순위표 기능을 위해 Apple이 제공하는 플레이어 표시 이름과 플레이어 식별자를 앱 실행 중 처리할 수 있습니다. 이 정보는 AXENFOLD 개발자 서버에 저장하지 않습니다.'],
-        ['2. 기기 내 저장 정보','게임 기록과 진행 정보는 기기 내부 저장소에 저장될 수 있습니다. 여기에는 10초 맞히기·연타왕·공 튕기기·한붓그리기·한칸질주·번쩍기억의 기록과 진행, 보유 코인, 미니룸 가구·배치·캐릭터 꾸미기, BGM·음량 설정, 언어·소리·진동·튜토리얼 확인 같은 앱 설정이 포함될 수 있습니다. 이름, 이메일, 전화번호, 위치정보 등 사용자를 식별하기 위한 정보는 이러한 로컬 게임 기록에 포함하지 않습니다.'],
-        ['3. 광고·분석·결제','현재 출시 코드에는 광고 SDK, 사용자 추적·분석 SDK, 인앱결제 또는 구독 기능이 활성화되어 있지 않습니다.'],
-        ['4. 외부 전송 및 제3자 제공','현재 검증된 앱 코드에는 AXENFOLD 개발자 서버/API로 게임 이용정보를 전송하는 경로가 없습니다. 다만 사용자가 Apple Game Center에 로그인한 경우 플레이어 식별 정보와 해당 플레이에서 획득한 순위표 점수를 Apple Game Center로 전송할 수 있습니다. Game Center의 데이터 처리는 Apple의 서비스 및 개인정보 보호 정책을 따릅니다.'],
-        ['5. 시스템 백업','Android는 allowBackup=false이며 cloud backup 및 device transfer용 data extraction rules에서도 앱 데이터 백업을 제외합니다. iOS에서는 앱의 WebKit 로컬 저장소에 기록이 보관되며, 앱 자체 iCloud 동기화나 개발자 서버 백업은 제공하지 않습니다. 운영체제 자체의 백업·복원 동작은 Apple의 시스템 설정과 정책에 따를 수 있습니다.'],
-        ['6. 삭제','앱 삭제 또는 운영체제의 앱 데이터 삭제 기능을 사용하면 기기 내부의 로컬 기록도 일반적으로 함께 삭제됩니다. 운영체제 백업에서 복원한 경우 기록이 다시 나타날 수 있습니다.'],
-        ['7. 방침 변경','향후 광고, 분석, 결제, AXENFOLD 계정 로그인, 클라우드 동기화 또는 추가 네트워크 기능을 도입하는 경우 해당 기능 출시 전에 본 방침과 App Store 앱 개인정보 및 Google Play Data Safety 신고를 다시 검토합니다.'],
-        ['8. 운영자 및 문의','서비스 운영 브랜드: AXENFOLD. 개인정보 및 서비스 관련 문의: axenfold.support@gmail.com']
-      ]
-    },
-    en:{
-      title:'TTOPAN Privacy Policy',effective:'Effective: October 8, 2026',
-      sections:[
-        ['1. Personal Data Collection','TTOPAN does not provide an AXENFOLD account system or developer-operated sign-in. On iOS, users may optionally sign in with Apple Game Center. For authentication and leaderboard features, the app may process the player display name and player identifier supplied by Apple while the app is running. AXENFOLD does not store this information on a developer server.'],
-        ['2. Data Stored on Your Device','Game records and progress may be stored locally on your device. This can include records and progress for 10-Second Challenge, Tap King, Bounce, One-Stroke, Lane Hop and Flash Grid, earned coins, miniroom furniture and layouts, character customization, BGM and volume preferences, and preferences such as language, sound, haptics and tutorial status. Identifying information such as your name, email address, phone number or location is not included in these local game records.'],
-        ['3. Advertising, Analytics, and Payments','The current release code does not have an active advertising SDK, user-tracking or analytics SDK, in-app purchase, or subscription feature.'],
-        ['4. External Transmission and Third Parties','The currently verified app code has no path that sends gameplay data to an AXENFOLD developer server or API. If the user signs in to Apple Game Center, the app may send the player identifier and leaderboard scores earned in gameplay to Apple Game Center. Game Center data is handled under Apple’s service and privacy policies.'],
-        ['5. System Backup','Android uses allowBackup=false and data extraction rules that exclude app data from cloud backup and device transfer. On iOS, records are stored in the app’s WebKit local storage. The app does not provide its own iCloud sync or developer-server backup. Apple operating-system backup and restore behavior may still follow Apple’s system settings and policies.'],
-        ['6. Deletion','Uninstalling the app or using the operating system’s app-data deletion controls will generally remove locally stored records. Records may reappear if restored from an operating-system backup.'],
-        ['7. Changes to This Policy','If advertising, analytics, payments, an AXENFOLD account sign-in, cloud sync, or additional network features are added later, this policy, App Store privacy disclosures, and Google Play Data Safety information will be reviewed before those features are released.'],
-        ['8. Operator and Contact','Service brand: AXENFOLD. Privacy and service inquiries: axenfold.support@gmail.com']
-      ]
-    }
-  };
-  function render(next){
-    lang=next; document.documentElement.lang=lang;
-    try{localStorage.setItem(KEY,lang)}catch{}
-    const c=copy[lang]; document.title=c.title;
-    document.querySelector('#content').innerHTML='<h1>'+c.title+'</h1><p class="notice">'+c.effective+'</p>'+c.sections.map(([h,b])=>'<section><h2>'+h+'</h2><p>'+b+'</p></section>').join('');
-    document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
-  }
-  document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>render(b.dataset.lang));
-  render(lang);
+(function(){
+const policy={
+ko:{
+ title:'또판 개인정보처리방침',effective:'최종 갱신: 2026-10-09 · 현재 공개된 1.0과 준비 중인 1.1의 데이터 처리를 구분하여 설명합니다.',
+ contact:'운영: AXENFOLD · 개인정보 및 서비스 문의: axenfold.support@gmail.com',
+ sections:[
+ ['1. 계정과 Apple Game Center','또판은 별도의 개발자 회원가입이나 로그인을 요구하지 않습니다. 이용자가 선택적으로 Apple Game Center에 로그인하면 표시 이름, 플레이어 식별자와 순위표 점수를 Apple 서비스와 주고받을 수 있습니다. 이 정보는 AXENFOLD 자체 서버에 저장하지 않습니다.'],
+ ['2. 기기 내부의 게임 데이터','게임 진행, 최고 기록, 코인, 가구·방 배치·캐릭터, 미니게임 업적, 방문 방 목록, 사용자가 등록한 발도장 방명록, 언어·음량 등 설정을 기기 내부에 저장할 수 있습니다. 개발자 서버에 개인의 방이나 코인을 업로드하지 않습니다.'],
+ ['3. 오프라인 방 공유와 발도장','이용자가 직접 공유를 선택하면 방 모습·선택한 방 이름·획득한 업적·임의로 생성된 방 구분 코드가 파일이나 코드로 전달됩니다. 방문자가 발도장 공유를 선택한 경우에는 입력한 닉네임·메시지·방문 날짜 및 해당 방에서만 사용하는 임의 방문자 구분 코드가 공유됩니다. 수신자가 방 주인에게 보내는 방식이며 자동 방문 추적이나 온라인 서버 집계는 하지 않습니다. 발도장 TODAY와 TOTAL은 주인이 기기에 받아 등록한 기록 수입니다. 공유한 자료는 사용자가 선택한 메시징·SNS 서비스의 방침도 따릅니다.'],
+ ['4. 광고 및 제3자 정보 처리 — 앱 버전별 차이','현재 배포 중인 1.0에는 광고 기능이 활성화되어 있지 않습니다. 광고 기능이 활성화되는 향후 1.1 업데이트에서는 Google AdMob 광고와 동의 관리 플랫폼(UMP)을 사용할 예정입니다. 광고가 표시되는 경우 Google Mobile Ads SDK는 IP 주소(대략적 지역 추정), 기기 식별자, 광고 표시·상호작용 정보, 앱 실행·성능·비정상 종료 진단정보 등을 수집·처리할 수 있습니다. 광고 동의가 필요한 지역에서는 해당 동의 및 개인정보 선택 절차가 적용됩니다. 개인 맞춤 광고를 사용하지 않더라도 광고 빈도 제한·집계 등을 위해 식별자나 로컬 저장 기술이 사용될 수 있습니다. 해당 정보는 Google의 개인정보처리방침도 적용됩니다: https://policies.google.com/privacy'],
+ ['5. Apple 인앱결제','1.1 업데이트에서 광고 영구 제거 비소모성 인앱결제를 제공할 예정입니다. 실제 결제, 계정 및 결제 수단 처리는 Apple App Store에서 수행하며, 앱은 StoreKit을 사용해 광고 제거 상품의 구매 유효성·복원 여부만 확인합니다. 별도 개발자 결제 서버를 운영하지 않습니다.'],
+ ['6. 저장·삭제 및 백업','방명록·방 코드·코인 등 로컬 정보는 사용 중인 기기에 보관되며 앱 삭제 또는 앱 데이터 삭제 시 함께 사라질 수 있습니다. 운영체제에서 제공하는 백업·복원은 Apple 시스템 정책을 따릅니다. 로컬 발도장 기록은 자동 동기화되지 않으므로 기기를 바꾸면 이전 기록이 보존되지 않을 수 있습니다.'],
+ ['7. 변경과 고지','앱 업데이트에서 실제로 활성화되는 기능에 맞춰 개인정보 공개 항목과 본 방침을 검토합니다. 새 기능을 추가하거나 외부 처리 방식이 달라지면 시행 전에 필요한 안내를 갱신합니다.']
+]},
+en:{
+ title:'TTOPAN Privacy Policy',effective:'Updated: October 9, 2026 · Distinguishes the publicly released 1.0 app from features being prepared for version 1.1.',
+ contact:'Operator: AXENFOLD · Privacy and support: axenfold.support@gmail.com',
+ sections:[
+ ['1. Accounts and Apple Game Center','TTOPAN does not require a developer-operated account or sign-in. If you choose to sign in to Apple Game Center, the app may exchange your Game Center player identifier, display name, and leaderboard scores with Apple. AXENFOLD does not host these identifiers on a developer server.'],
+ ['2. Information on your device','Game progress and scores for 10-Second Challenge, Tap King, Bounce, One-Stroke, Lane Hop, and Flash Grid; coins, furniture and room arrangements, avatar choices, achievements, locally visited rooms, manually imported guestbook stamps, and settings such as language and sound may be stored on your device. Your room and currency are not uploaded to an AXENFOLD server.'],
+ ['3. Offline room sharing and guestbook','When you choose to share, a file or code may contain your room layout, chosen room name, earned badges, and a randomly generated room label. Voluntary guestbook stamps may include a nickname, optional message, visit day, and a random alias used only for that room. Friends must return stamps to the owner, who manually records them. TODAY/TOTAL measure received stamps, not automatically observed visitors. Data sent through messaging or social services is also subject to the service you choose.'],
+ ['4. Advertising and third-party data — version-specific','The currently published 1.0 app does not serve ads. A future version 1.1 build, when advertising is enabled, is intended to use Google AdMob and the User Messaging Platform (UMP). When ads are served, Google Mobile Ads may process IP address (approximate geographic location), device identifiers, ad impressions/interactions, and app launch, performance, and crash diagnostics. Where required, UMP presents applicable consent and privacy choices. Even non-personalized ads may use identifiers or local storage for frequency capping and aggregated measurement. Google Privacy Policy: https://policies.google.com/privacy'],
+ ['5. Apple in-app purchases','Version 1.1 is planned to offer a permanent, non-consumable Remove Ads purchase. Apple handles billing and payment credentials through the App Store. The app uses StoreKit to verify whether a purchase is valid and restorable; no developer-operated billing server is provided.'],
+ ['6. Storage, deletion, and backup','Your local records can be removed when you uninstall the app or erase its data. Device-level backup and restoration may be governed by the operating system. Stamps and room visits are not automatically synchronized across devices.'],
+ ['7. Policy changes','We review this policy and App Store privacy disclosures before activating new functionality or changing external data processing.']
+]},
+ja:{
+ title:'TTOPAN プライバシーポリシー',effective:'更新日：2026年10月9日 · 公開中の1.0と開発中の1.1のデータ処理を区別して説明します。',
+ contact:'運営：AXENFOLD · お問い合わせ：axenfold.support@gmail.com',
+ sections:[
+ ['1. アカウントとGame Center','独自アカウントやログインは必須ではありません。Apple Game Centerへの任意のログイン時には、プレイヤー識別子・表示名・ランキングスコアがAppleサービスとやり取りされる場合があります。開発者サーバーには保存しません。'],
+ ['2. 端末内の記録','ゲームの進行・スコア・コイン・家具・部屋の配置・キャラクター・実績・訪問した部屋・受信登録した足あと・言語や音量などの設定は端末内に保存されます。部屋やコインを独自サーバーへアップロードしません。'],
+ ['3. オフライン共有と足あと','利用者が共有を選択した場合、部屋の配置、任意の部屋名、達成バッジ、ランダムな部屋識別コードをファイル等で送信します。足あとは任意の名前・メッセージ・訪問日・その部屋専用のランダムな識別コードを含みます。持ち主が受け取って登録した数がTODAYとTOTALであり、自動訪問者追跡ではありません。共有先サービスのプライバシー方針が別途適用されます。'],
+ ['4. 広告と外部データ処理（バージョン別）','現在公開中の1.0では広告は有効ではありません。広告を有効化する将来の1.1更新ではGoogle AdMobと同意管理ツールUMPを使用する予定です。広告配信時には、IPアドレス（おおよその地域）、端末識別子、広告表示・操作データ、起動・性能・クラッシュ診断情報をGoogleが処理することがあります。必要な地域には同意やプライバシー選択が適用されます。非パーソナライズ広告でも頻度制御や集計に識別子等を使用する場合があります。Google: https://policies.google.com/privacy'],
+ ['5. Appleアプリ内課金','1.1では広告を永久に削除する買い切り型のアプリ内購入を予定しています。決済と支払情報はAppleが処理し、アプリではStoreKitで購入の有効性と復元を確認します。独自決済サーバーは使用しません。'],
+ ['6. 保存・削除','端末内の記録はアプリを削除すると失われる場合があります。OSのバックアップ・復元はAppleの仕様に従います。足あとや訪問履歴は端末間で自動同期しません。'],
+ ['7. 変更','新機能や外部処理を有効にする前に、アプリのプライバシー申告と本ポリシーを更新します。']
+]},
+zh:{
+ title:'TTOPAN 隐私政策',effective:'更新日期：2026年10月9日 · 分别说明已上线的1.0版本及准备中的1.1版本。',
+ contact:'运营方：AXENFOLD · 隐私及服务联系：axenfold.support@gmail.com',
+ sections:[
+ ['1. 账户与Apple Game Center','无需注册开发者账号。用户可自愿登录Apple Game Center，此时可能与Apple服务交换玩家标识、显示名称和排行榜成绩。AXENFOLD不会在自己的服务器上存储这些标识。'],
+ ['2. 设备本地数据','游戏进度、记录、金币、家具、房间布置、角色造型、成就、访问过的房间、收到的足迹和语言、音量设置可能保存在本机。房间和金币不会上传到开发者服务器。'],
+ ['3. 离线房间分享与留言簿','主动分享时，可通过文件或代码发送房间布置、自选房间名称、成就徽章以及随机生成的房间代码。主动发送足迹时，可包含访客昵称、可选留言、访问日期和仅适用于该房间的随机访客别名。房主必须收到并手动登记足迹；TODAY和TOTAL不是自动访客统计。通过第三方通讯或社交服务分享时，也适用用户选择的服务的隐私政策。'],
+ ['4. 广告与第三方数据（按版本区分）','当前上线的1.0不展示广告。在未来启用广告的1.1更新中，计划使用Google AdMob和用户消息平台UMP。展示广告时，Google Mobile Ads可能处理IP地址（大致位置）、设备标识符、广告展示及互动信息、应用启动、性能和崩溃诊断数据。在适用地区会提供相应的同意和隐私选择。即使是不按兴趣定向的广告，也可能为频次控制及汇总统计使用标识符或本地存储。Google隐私政策：https://policies.google.com/privacy'],
+ ['5. Apple应用内购买','1.1计划提供一次性永久去广告商品。账单及支付资料由Apple App Store处理。应用通过StoreKit核实购买有效性和恢复情况，不使用开发者自建的支付服务器。'],
+ ['6. 保存与删除','卸载应用或清除应用数据可能删除本地记录。系统备份与恢复受Apple设置及政策管理。访客足迹和访问记录不会自动跨设备同步。'],
+ ['7. 政策更新','在启用新的数据处理功能之前，将更新本政策及App Store隐私披露信息。']
+]}
+};
+const KEY='ttopan.privacy.lang';
+const supported=['ko','en','ja','zh'];
+const params=new URLSearchParams(location.search);
+let locale=params.get('lang');
+if(!supported.includes(locale)){try{locale=localStorage.getItem(KEY)}catch{}}
+if(!supported.includes(locale)){const primary=(navigator.language||'en').toLowerCase().split(/[-_]/)[0];locale=supported.includes(primary)?primary:'en'}
+function render(lang){
+ locale=lang;
+ document.documentElement.lang=lang==='zh'?'zh-Hans':lang;
+ const c=policy[lang];document.title=c.title;
+ document.querySelector('#heading').textContent=c.title;
+ document.querySelector('#effective').textContent=c.effective;
+ document.querySelector('#contact').textContent=c.contact;
+ const holder=document.querySelector('#sections');holder.replaceChildren();
+ for(const pair of c.sections){
+  const section=document.createElement('section');
+  const h=document.createElement('h2');h.textContent=pair[0];section.append(h);
+  const p=document.createElement('p');p.textContent=pair[1];section.append(p);
+  holder.append(section)
+ }
+ document.querySelectorAll('button[data-lang]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.lang===lang)));
+ try{localStorage.setItem(KEY,lang)}catch{}
+}
+document.querySelectorAll('button[data-lang]').forEach(btn=>btn.addEventListener('click',()=>render(btn.dataset.lang)));
+render(locale);
 })();
-</script>
-</body>
-</html>
+</script></body></html>

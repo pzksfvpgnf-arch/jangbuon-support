@@ -29,52 +29,56 @@ small{color:#847164}a{color:#885d66}footer{margin-top:32px;border-top:1px solid 
 (function(){
 const policy={
 ko:{
- title:'또판 개인정보처리방침',effective:'최종 갱신: 2026-10-09 · 현재 공개된 1.0과 준비 중인 1.1의 데이터 처리를 구분하여 설명합니다.',
+ title:'또판 개인정보처리방침',effective:'최종 갱신: 2026-10-14 · 공개 앱과 TestFlight 1.3의 선택적 공유 기능을 구분해 설명합니다.',
  contact:'운영: AXENFOLD · 개인정보 및 서비스 문의: axenfold.support@gmail.com',
  sections:[
  ['1. 계정과 Apple Game Center','또판은 별도의 개발자 회원가입이나 로그인을 요구하지 않습니다. 이용자가 선택적으로 Apple Game Center에 로그인하면 표시 이름, 플레이어 식별자와 순위표 점수를 Apple 서비스와 주고받을 수 있습니다. 이 정보는 AXENFOLD 자체 서버에 저장하지 않습니다.'],
- ['2. 기기 내부의 게임 데이터','게임 진행, 최고 기록, 코인, 가구·방 배치·캐릭터, 미니게임 업적, 방문 방 목록, 사용자가 등록한 발도장 방명록, 언어·음량 등 설정을 기기 내부에 저장할 수 있습니다. 개발자 서버에 개인의 방이나 코인을 업로드하지 않습니다.'],
+ ['2. 기기 내부의 게임 데이터','게임 진행, 최고 기록, 코인, 가구·방 배치·캐릭터, 미니게임 업적, 방문 방 목록, 사용자가 등록한 발도장 방명록, 언어·음량 등 설정을 기기 내부에 저장할 수 있습니다. 코인·구매 내역은 자체 서버에 업로드하지 않습니다. 8자리 공유 코드를 직접 발행할 때만 방의 보기 전용 스냅샷을 임시 서버에 저장합니다.'],
  ['3. 오프라인 방 공유와 발도장','이용자가 직접 공유를 선택하면 방 모습·선택한 방 이름·획득한 업적·임의로 생성된 방 구분 코드가 파일이나 코드로 전달됩니다. 방문자가 발도장 공유를 선택한 경우에는 입력한 닉네임·메시지·방문 날짜 및 해당 방에서만 사용하는 임의 방문자 구분 코드가 공유됩니다. 수신자가 방 주인에게 보내는 방식이며 자동 방문 추적이나 온라인 서버 집계는 하지 않습니다. 발도장 TODAY와 TOTAL은 주인이 기기에 받아 등록한 기록 수입니다. 공유한 자료는 사용자가 선택한 메시징·SNS 서비스의 방침도 따릅니다.'],
  ['4. 광고 및 제3자 정보 처리 — 앱 버전별 차이','현재 배포 중인 1.0에는 광고 기능이 활성화되어 있지 않습니다. 광고 기능이 활성화되는 향후 1.1 업데이트에서는 Google AdMob 광고와 동의 관리 플랫폼(UMP)을 사용할 예정입니다. 광고가 표시되는 경우 Google Mobile Ads SDK는 IP 주소(대략적 지역 추정), 기기 식별자, 광고 표시·상호작용 정보, 앱 실행·성능·비정상 종료 진단정보 등을 수집·처리할 수 있습니다. 광고 동의가 필요한 지역에서는 해당 동의 및 개인정보 선택 절차가 적용됩니다. 개인 맞춤 광고를 사용하지 않더라도 광고 빈도 제한·집계 등을 위해 식별자나 로컬 저장 기술이 사용될 수 있습니다. 해당 정보는 Google의 개인정보처리방침도 적용됩니다: https://policies.google.com/privacy'],
  ['5. Apple 인앱결제','1.1 업데이트에서 광고 영구 제거 비소모성 인앱결제를 제공할 예정입니다. 실제 결제, 계정 및 결제 수단 처리는 Apple App Store에서 수행하며, 앱은 StoreKit을 사용해 광고 제거 상품의 구매 유효성·복원 여부만 확인합니다. 별도 개발자 결제 서버를 운영하지 않습니다.'],
  ['6. 저장·삭제 및 백업','방명록·방 코드·코인 등 로컬 정보는 사용 중인 기기에 보관되며 앱 삭제 또는 앱 데이터 삭제 시 함께 사라질 수 있습니다. 운영체제에서 제공하는 백업·복원은 Apple 시스템 정책을 따릅니다. 로컬 발도장 기록은 자동 동기화되지 않으므로 기기를 바꾸면 이전 기록이 보존되지 않을 수 있습니다.'],
- ['7. 변경과 고지','앱 업데이트에서 실제로 활성화되는 기능에 맞춰 개인정보 공개 항목과 본 방침을 검토합니다. 새 기능을 추가하거나 외부 처리 방식이 달라지면 시행 전에 필요한 안내를 갱신합니다.']
+ ['7. 8자리 온라인 공유 코드','이용자가 직접 발행하는 8자리 방문 코드는 공개 가능한 방 이름·배치·캐릭터·업적·임의 방 식별자 등 보기 전용 정보를 Netlify 서버에 최대 30일 저장합니다. 발도장 코드는 선택한 닉네임·메시지·방문 날짜·방별 임의 방문자 구분 코드, 파도타기 선택 시 공유 방 스냅샷을 최대 14일 저장합니다. 코드를 아는 누구나 만료 전 내용을 조회할 수 있습니다. 실제 계정, 코인, 구매·결제 내역은 저장하지 않습니다. 운영 수탁 제공자는 Netlify, Inc.이며 저장소는 미국 리전(us-east-2)을 사용합니다. 접속 IP 등 통상적인 서버 운영 로그는 제공자가 처리할 수 있습니다. 만료된 코드는 조회를 막고 정기 정리 절차로 삭제합니다. 조기 삭제 문의는 axenfold.support@gmail.com으로 접수합니다. 서버 연결이 없으면 기존 긴 오프라인 코드 공유를 이용할 수 있습니다.'],
+ ['8. 변경과 고지','앱 업데이트에서 실제로 활성화되는 기능에 맞춰 개인정보 공개 항목과 본 방침을 검토합니다. 새 기능을 추가하거나 외부 처리 방식이 달라지면 시행 전에 필요한 안내를 갱신합니다.']
 ]},
 en:{
- title:'TTOPAN Privacy Policy',effective:'Updated: October 9, 2026 · Distinguishes the publicly released 1.0 app from features being prepared for version 1.1.',
+ title:'TTOPAN Privacy Policy',effective:'Updated: October 14, 2026 · Explains published and TestFlight 1.3 optional sharing behavior.',
  contact:'Operator: AXENFOLD · Privacy and support: axenfold.support@gmail.com',
  sections:[
  ['1. Accounts and Apple Game Center','TTOPAN does not require a developer-operated account or sign-in. If you choose to sign in to Apple Game Center, the app may exchange your Game Center player identifier, display name, and leaderboard scores with Apple. AXENFOLD does not host these identifiers on a developer server.'],
- ['2. Information on your device','Game progress and scores for 10-Second Challenge, Tap King, Bounce, One-Stroke, Lane Hop, and Flash Grid; coins, furniture and room arrangements, avatar choices, achievements, locally visited rooms, manually imported guestbook stamps, and settings such as language and sound may be stored on your device. Your room and currency are not uploaded to an AXENFOLD server.'],
+ ['2. Information on your device','Game progress and scores for 10-Second Challenge, Tap King, Bounce, One-Stroke, Lane Hop, and Flash Grid; coins, furniture and room arrangements, avatar choices, achievements, locally visited rooms, manually imported guestbook stamps, and settings such as language and sound may be stored on your device. Coins and purchases are not uploaded to the sharing server. A read-only room snapshot is temporarily uploaded only if you request an 8-character share code.'],
  ['3. Offline room sharing and guestbook','When you choose to share, a file or code may contain your room layout, chosen room name, earned badges, and a randomly generated room label. Voluntary guestbook stamps may include a nickname, optional message, visit day, and a random alias used only for that room. Friends must return stamps to the owner, who manually records them. TODAY/TOTAL measure received stamps, not automatically observed visitors. Data sent through messaging or social services is also subject to the service you choose.'],
  ['4. Advertising and third-party data — version-specific','The currently published 1.0 app does not serve ads. A future version 1.1 build, when advertising is enabled, is intended to use Google AdMob and the User Messaging Platform (UMP). When ads are served, Google Mobile Ads may process IP address (approximate geographic location), device identifiers, ad impressions/interactions, and app launch, performance, and crash diagnostics. Where required, UMP presents applicable consent and privacy choices. Even non-personalized ads may use identifiers or local storage for frequency capping and aggregated measurement. Google Privacy Policy: https://policies.google.com/privacy'],
  ['5. Apple in-app purchases','Version 1.1 is planned to offer a permanent, non-consumable Remove Ads purchase. Apple handles billing and payment credentials through the App Store. The app uses StoreKit to verify whether a purchase is valid and restorable; no developer-operated billing server is provided.'],
  ['6. Storage, deletion, and backup','Your local records can be removed when you uninstall the app or erase its data. Device-level backup and restoration may be governed by the operating system. Stamps and room visits are not automatically synchronized across devices.'],
- ['7. Policy changes','We review this policy and App Store privacy disclosures before activating new functionality or changing external data processing.']
+ ['7. Optional 8-character online share codes','When you explicitly issue an 8-character room code, a read-only snapshot (chosen room name, layout, avatar, badges and random room identifier) is stored for up to 30 days. Guestbook codes store the chosen nickname, message, visit date, random per-room guest alias and, if selected, a read-only return-room snapshot for up to 14 days. Anyone who knows a valid code can retrieve this content. No account, coins, purchase history or payment data is stored. The service is processed by Netlify, Inc. using US storage (us-east-2); ordinary access logs such as IP addresses may be handled by the provider. Expired codes stop resolving and are removed by scheduled cleanup. Ask axenfold.support@gmail.com about early deletion. Existing long offline codes remain available when the service is unavailable.'],
+ ['8. Policy changes','We review this policy and App Store privacy disclosures before activating new functionality or changing external data processing.']
 ]},
 ja:{
- title:'TTOPAN プライバシーポリシー',effective:'更新日：2026年10月9日 · 公開中の1.0と開発中の1.1のデータ処理を区別して説明します。',
+ title:'TTOPAN プライバシーポリシー',effective:'更新日：2026年10月14日 · 公開版とTestFlight 1.3の任意共有機能を区別して説明します。',
  contact:'運営：AXENFOLD · お問い合わせ：axenfold.support@gmail.com',
  sections:[
  ['1. アカウントとGame Center','独自アカウントやログインは必須ではありません。Apple Game Centerへの任意のログイン時には、プレイヤー識別子・表示名・ランキングスコアがAppleサービスとやり取りされる場合があります。開発者サーバーには保存しません。'],
- ['2. 端末内の記録','ゲームの進行・スコア・コイン・家具・部屋の配置・キャラクター・実績・訪問した部屋・受信登録した足あと・言語や音量などの設定は端末内に保存されます。部屋やコインを独自サーバーへアップロードしません。'],
+ ['2. 端末内の記録','ゲームの進行・スコア・コイン・家具・部屋の配置・キャラクター・実績・訪問した部屋・受信登録した足あと・言語や音量などの設定は端末内に保存されます。コインや購入情報は共有サーバーに送信しません。8文字の共有コードを利用者が発行した場合に限り、閲覧専用ルーム情報を一時保存します。'],
  ['3. オフライン共有と足あと','利用者が共有を選択した場合、部屋の配置、任意の部屋名、達成バッジ、ランダムな部屋識別コードをファイル等で送信します。足あとは任意の名前・メッセージ・訪問日・その部屋専用のランダムな識別コードを含みます。持ち主が受け取って登録した数がTODAYとTOTALであり、自動訪問者追跡ではありません。共有先サービスのプライバシー方針が別途適用されます。'],
  ['4. 広告と外部データ処理（バージョン別）','現在公開中の1.0では広告は有効ではありません。広告を有効化する将来の1.1更新ではGoogle AdMobと同意管理ツールUMPを使用する予定です。広告配信時には、IPアドレス（おおよその地域）、端末識別子、広告表示・操作データ、起動・性能・クラッシュ診断情報をGoogleが処理することがあります。必要な地域には同意やプライバシー選択が適用されます。非パーソナライズ広告でも頻度制御や集計に識別子等を使用する場合があります。Google: https://policies.google.com/privacy'],
  ['5. Appleアプリ内課金','1.1では広告を永久に削除する買い切り型のアプリ内購入を予定しています。決済と支払情報はAppleが処理し、アプリではStoreKitで購入の有効性と復元を確認します。独自決済サーバーは使用しません。'],
  ['6. 保存・削除','端末内の記録はアプリを削除すると失われる場合があります。OSのバックアップ・復元はAppleの仕様に従います。足あとや訪問履歴は端末間で自動同期しません。'],
- ['7. 変更','新機能や外部処理を有効にする前に、アプリのプライバシー申告と本ポリシーを更新します。']
+ ['7. 任意の8文字オンライン共有コード','利用者が8文字コードを発行した場合、閲覧専用の部屋名・配置・アバター・実績・ランダムな部屋識別子を最大30日間サーバーに保存します。足あとコードには任意のニックネーム、メッセージ、日付、ランダムな訪問者識別子、選択時の閲覧専用返信ルームを最大14日間保存します。有効なコードを知る人は内容を閲覧できます。アカウント、コイン、購入情報や決済情報は保存しません。処理提供者はNetlify, Inc.で、米国リージョン(us-east-2)を使用します。IPアドレスなど通常のアクセスログは提供者が処理する場合があります。期限切れのコードは利用不可となり、定期処理で削除します。早期削除はaxenfold.support@gmail.comへご相談ください。接続できない場合は従来の長いオフラインコードで共有できます。'],
+ ['8. 変更','新機能や外部処理を有効にする前に、アプリのプライバシー申告と本ポリシーを更新します。']
 ]},
 zh:{
- title:'TTOPAN 隐私政策',effective:'更新日期：2026年10月9日 · 分别说明已上线的1.0版本及准备中的1.1版本。',
+ title:'TTOPAN 隐私政策',effective:'更新日期：2026年10月14日 · 区分公开版本和TestFlight 1.3的自愿共享功能。',
  contact:'运营方：AXENFOLD · 隐私及服务联系：axenfold.support@gmail.com',
  sections:[
  ['1. 账户与Apple Game Center','无需注册开发者账号。用户可自愿登录Apple Game Center，此时可能与Apple服务交换玩家标识、显示名称和排行榜成绩。AXENFOLD不会在自己的服务器上存储这些标识。'],
- ['2. 设备本地数据','游戏进度、记录、金币、家具、房间布置、角色造型、成就、访问过的房间、收到的足迹和语言、音量设置可能保存在本机。房间和金币不会上传到开发者服务器。'],
+ ['2. 设备本地数据','游戏进度、记录、金币、家具、房间布置、角色造型、成就、访问过的房间、收到的足迹和语言、音量设置可能保存在本机。金币和购买数据不会上传到分享服务器。只有主动生成8位分享码时，才会临时上传只读房间快照。'],
  ['3. 离线房间分享与留言簿','主动分享时，可通过文件或代码发送房间布置、自选房间名称、成就徽章以及随机生成的房间代码。主动发送足迹时，可包含访客昵称、可选留言、访问日期和仅适用于该房间的随机访客别名。房主必须收到并手动登记足迹；TODAY和TOTAL不是自动访客统计。通过第三方通讯或社交服务分享时，也适用用户选择的服务的隐私政策。'],
  ['4. 广告与第三方数据（按版本区分）','当前上线的1.0不展示广告。在未来启用广告的1.1更新中，计划使用Google AdMob和用户消息平台UMP。展示广告时，Google Mobile Ads可能处理IP地址（大致位置）、设备标识符、广告展示及互动信息、应用启动、性能和崩溃诊断数据。在适用地区会提供相应的同意和隐私选择。即使是不按兴趣定向的广告，也可能为频次控制及汇总统计使用标识符或本地存储。Google隐私政策：https://policies.google.com/privacy'],
  ['5. Apple应用内购买','1.1计划提供一次性永久去广告商品。账单及支付资料由Apple App Store处理。应用通过StoreKit核实购买有效性和恢复情况，不使用开发者自建的支付服务器。'],
  ['6. 保存与删除','卸载应用或清除应用数据可能删除本地记录。系统备份与恢复受Apple设置及政策管理。访客足迹和访问记录不会自动跨设备同步。'],
- ['7. 政策更新','在启用新的数据处理功能之前，将更新本政策及App Store隐私披露信息。']
+ ['7. 自愿使用8位在线分享码','主动生成8位访客码时，将只读房间名称、布置、角色、成就及随机房间标识在服务器保留最多30天。足迹码可将自选昵称、留言、日期、随机访客标识以及用户选择附带的只读回访房间最多保留14天。任何知道有效代码的人都能读取这些内容。不会储存账号、金币、购买记录或支付资料。服务由Netlify, Inc.处理，存储区域位于美国(us-east-2)，提供方可能处理IP地址等常规访问日志。到期代码将无法访问，并在定期清理中删除。提前删除可联系axenfold.support@gmail.com。服务器不可用时仍可使用较长的离线代码。'],
+ ['8. 政策更新','在启用新的数据处理功能之前，将更新本政策及App Store隐私披露信息。']
 ]}
 };
 const KEY='ttopan.privacy.lang';
